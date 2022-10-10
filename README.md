@@ -14,12 +14,18 @@ pip install pyfirmata
 ```
 Then install the Arduino IDE
 
-## Basic setup
+## Instructions
 Now open Visual Studio code and look in the extensions for “Python & Code Runner”. After installing these two, open the downloaded codebase from this repository. Then add the FaceNet model in the codebase directory. After that, there is a folder named dataset in the codebase. Then just put the pictures you need to train in that dataset folder.
 
 Then open Arduino IDE and go to File -> Examples -> Firmata -> StandardFirmata. After that upload this StandardFirmata file to Arduino.
 
 Then there is a file labeled as traindata.py and after putting those images you will run this python file. This will create a pkl file named data.pkl which is a numpy database and you don't need to worry about this file because those trained images are stored in this file as numpy array.
+
+In the file named "faceRecognizer.py" you will find the following code
+```python
+board = Arduino("COM3") # Arduino port "COM3"
+pin = 10 # Use the board pin number you are working on
+```
 
 After that, just run the faceRecogniser.py file and voila... it works....
 
